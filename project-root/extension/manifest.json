@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Review Insights",
+  "version": "1.0",
+
+  "permissions": ["activeTab", "scripting", "tabs"],
+
+  "host_permissions": [
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "<all_urls>"
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
